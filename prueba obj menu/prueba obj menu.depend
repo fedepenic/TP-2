@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1556068340 source:e:\algoritmos y programacion ii\prueba obj menu\main.cpp
+	"Menu.h"
+	<iostream>
+
+1556074322 e:\algoritmos y programacion ii\prueba obj menu\acciones.h
+
+1556074322 e:\algoritmos y programacion ii\prueba obj menu\menu.h
+	"Gondola.h"
+	<fstream>
+	<iostream>
+
+1556074524 source:e:\algoritmos y programacion ii\prueba obj menu\menu.cpp
+	"acciones.h"
+	"Menu.h"
+
+1556064788 source:e:\algoritmos y programacion ii\prueba obj menu\producto.cpp
+	"Producto.h"
+
+1556064788 e:\algoritmos y programacion ii\prueba obj menu\producto.h
+	<iostream>
+
+1556060949 source:e:\algoritmos y programacion ii\prueba obj menu\acciones.cpp
+	"acciones.h"
+
+1555877741 source:e:\algoritmos y programacion ii\prueba obj menu\chango.cpp
+
+1556073318 source:e:\algoritmos y programacion ii\prueba obj menu\gondola.cpp
+	"Gondola.h"
+
+1556074322 e:\algoritmos y programacion ii\prueba obj menu\gondola.h
+	"Producto.h"
+	<iostream>
+
