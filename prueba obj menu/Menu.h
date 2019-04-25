@@ -2,20 +2,30 @@
 #define _MENU_H_
 
 #include "Gondola.h"
+#include "acciones.h"
 
 #include <fstream>
 
 #include <iostream>
 using namespace std;
 
-const size_t INICIO_ARCHIVO = 0;
+const char CARGAR_PRODUCTO = 'a';
+const char BUSCAR_PRODUCTO_NOMBRE = 'b';
+const char BUSCAR_PRODUCTO_BARRA = 'c';
+const char MODIFICAR_PRECIO = 'd';
+const char QUITAR_PRODUCTO = 'e';
+const char CANTIDAD_OFERTA = 'f';
+const char CARGAR_CHANGO = 'g';
+const char MOSTRAR_PRODUCTOS_GONDOLA = 'h';
+const char SALIR = 'x';
 
-struct datos{
-    int codigo;
-    string nombre;
-    float precio;
-    int oferta;
-};
+const char MENU_ACTIVO = 's';
+
+const string BUSQUEDA_NULA = "NINGUNO";
+
+const int MAX_CARGAR_PRODUCTOS = 10;
+
+
 
 class Menu{
     private:
@@ -38,6 +48,7 @@ class Menu{
         */
         void iniciar_compra();
 
+        private:
         /*
         *Descripcion: Lee dos veces el archivo "productos.txt" contando la cantidad de productos como sus caracteristicas.
         *Pre: El archivo "productos.txt" debe existir.
@@ -53,7 +64,7 @@ class Menu{
         void leer_cantidad(int &cantidad_productos, ifstream &archivo_productos);
 
         /*
-        *Descripcion: Lee el archivo "productos.txt" guardando sus caracteristicas en el vector de clase Productos del atributoi "gondola_principal".
+        *Descripcion: Lee el archivo "productos.txt" guardando sus caracteristicas en el vector de clase Productos del atributoi "gondola_principal" mediante el struct "obtener".
         *Pre: El archivo "productos.txt" debe existir. El vector perteneciente al atributo "gondola_principal" debe estar correctamente inicializado.
         *Post: Guarda las caracteristicas en el vector de clase Productos del atributo "gondola_principal".
         */
@@ -92,15 +103,34 @@ class Menu{
 		//Precondiciones: -.
 		//Postcondiciones: Se imprime por pantalla el menú de opciones para la visualización del usuario.
 		void mostrar_menu();
-    private:
-		void ejecutar_opcion_a();
-		void ejecutar_opcion_b();
+
+		/*Descripcion: Realizara los metodos necesarios para poder actualizar el vector dinamico de clase Prodcuto del atributo "gondola_principal".
+		 *Pre: Maximo 10 productos a ingresar..
+		 *Post: Queda actualizado el vector dinamico mencionado.
+		*/
+		void cargar_producto_gondola();
+
+        /*Descripcion: Pedira los datos de la cantidad deseada de productos a ingresar.
+		 *Pre: Codigo y Nombre de los productos no pueden repetirse.
+		 *Post: Los datos de los productos a ingresar quedan almacenados en el struct "cargar".
+		*/
+		void pedir_datos_producto(int nuevo_tamanio_cargar, dato cargar[]);
+
+		/*Descripcion: Busca el nombre del producto ingresado en el vector dinamico de clase Producto del atributo "gondola_principal".
+		 *Pre: -.
+		 *Post: Verifica la existencia del producto a buscar, procede a mostrar el submenu.
+		*/
+		void buscar_producto_nombre();
+
+
+		//void ejecutar_opcion_a();
+		//void ejecutar_opcion_b();
 		void ejecutar_opcion_c();
-		void ejecutar_opcion_d();
-		void ejecutar_opcion_e();
+		//void ejecutar_opcion_d();
+		//void ejecutar_opcion_e();
 		void ejecutar_opcion_f();
 		void ejecutar_opcion_g();
-		void ejecutar_opcion_h();
+		//void ejecutar_opcion_h();
 };
 
 

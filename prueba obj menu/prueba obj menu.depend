@@ -3,15 +3,16 @@
 	"Menu.h"
 	<iostream>
 
-1556074322 e:\algoritmos y programacion ii\prueba obj menu\acciones.h
+1556152403 e:\algoritmos y programacion ii\prueba obj menu\acciones.h
+	<iostream>
 
-1556074322 e:\algoritmos y programacion ii\prueba obj menu\menu.h
+1556158698 e:\algoritmos y programacion ii\prueba obj menu\menu.h
 	"Gondola.h"
+	"acciones.h"
 	<fstream>
 	<iostream>
 
-1556074524 source:e:\algoritmos y programacion ii\prueba obj menu\menu.cpp
-	"acciones.h"
+1556160049 source:e:\algoritmos y programacion ii\prueba obj menu\menu.cpp
 	"Menu.h"
 
 1556064788 source:e:\algoritmos y programacion ii\prueba obj menu\producto.cpp
@@ -25,10 +26,11 @@
 
 1555877741 source:e:\algoritmos y programacion ii\prueba obj menu\chango.cpp
 
-1556073318 source:e:\algoritmos y programacion ii\prueba obj menu\gondola.cpp
+1556158698 source:e:\algoritmos y programacion ii\prueba obj menu\gondola.cpp
 	"Gondola.h"
 
-1556074322 e:\algoritmos y programacion ii\prueba obj menu\gondola.h
+1556156661 e:\algoritmos y programacion ii\prueba obj menu\gondola.h
 	"Producto.h"
+	"acciones.h"
 	<iostream>
 
